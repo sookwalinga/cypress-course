@@ -23,7 +23,9 @@ describe('Various best-practices', () => {
     cy.location('pathname').should('equal', '/best-practices')
   })
 
-  it('intercepts', () => {
-    cy.intercept('POST', 'http://localhost:3000/examples', {})
+  it.only('intercepts', () => {
+    cy.intercept('POST', 'http://localhost:3000/examples', {
+      body: { message: 'successfully intercepted request' },
+    })
   })
 })
