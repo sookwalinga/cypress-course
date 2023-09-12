@@ -6,4 +6,8 @@ describe('Fundamentals test', () => {
       'Testing Fundamentals'
     )
   })
+  it('Accordion works correctly', () => {
+    cy.visit('/fundamentals')
+    cy.get('[data-test="accordion-item-1"]').click().pause()
+  })
 })
