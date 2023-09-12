@@ -44,5 +44,15 @@ describe('Various best-practices', () => {
     cy.getDataTest('grudge-list').within(() => {
       cy.get('li').should('have.length', 1)
     })
+
+    cy.getDataTest('grudge-input').within(() => {
+      cy.get('input').type('some second grudge')
+    })
+
+    cy.getDataTest('add-grudge-button').click()
+
+    cy.getDataTest('grudge-list').within(() => {
+      cy.get('li').should('have.length', 2)
+    })
   })
 })
