@@ -1,6 +1,9 @@
 describe('Various best-practices', () => {
   beforeEach(() => cy.visit('/examples'))
   it('multi-page testing', () => {
+    cy.getDataTest('nav-examples').click()
+    cy.location('pathname').should('equal', '/examples')
+
     cy.getDataTest('nav-why-cypress').click()
     cy.location('pathname').should('equal', '/')
 
@@ -12,9 +15,6 @@ describe('Various best-practices', () => {
 
     cy.getDataTest('nav-forms').click()
     cy.location('pathname').should('equal', '/forms')
-
-    // cy.getDataTest('nav-examples').click()
-    // cy.location('pathname').should('equal', '/examples')
 
     cy.getDataTest('nav-component').click()
     cy.location('pathname').should('equal', '/component')
