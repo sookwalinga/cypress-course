@@ -27,5 +27,6 @@ describe('Various best-practices', () => {
     cy.intercept('POST', 'http://localhost:3000/examples', {
       body: { message: 'successfully intercepted request' },
     })
+    cy.getDataTest('post-button').click()
   })
 })
