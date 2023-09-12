@@ -35,5 +35,7 @@ describe('Various best-practices', () => {
     cy.getDataTest('grudge-input').within(() => {
       cy.get('input').type('some grudge')
     })
+
+    cy.getDataTest('add-grudge-button').click()
   })
 })
