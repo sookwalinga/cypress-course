@@ -11,11 +11,15 @@ describe('Accordion.cy.jsx', () => {
     cy.contains(
       'You can quite easily write tests across pages to better test entire user workflows'
     ).should('not.be.visible')
-    cy.getDataTest('accordion-item-1').click()
+    cy.getDataTest('accordion-item-1').within(() =>
+      cy.get('[role=button]').click()
+    )
     cy.contains(
       'You can quite easily write tests across pages to better test entire user workflows'
     ).should('be.visible')
-    cy.getDataTest('accordion-item-1').click()
+    cy.getDataTest('accordion-item-1').within(() =>
+      cy.get('[role=button]').click()
+    )
     cy.contains(
       'You can quite easily write tests across pages to better test entire user workflows'
     ).should('not.be.visible')
