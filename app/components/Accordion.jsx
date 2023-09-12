@@ -6,7 +6,10 @@ import Typography from '@mui/material/Typography'
 
 export default function ItemsAccordion({ items }) {
   return (
-    <div style={{ maxWidth: '70vw', minWidth: '50vw' }}>
+    <div
+      data-test='accordion-wrap'
+      style={{ maxWidth: '70vw', minWidth: '50vw' }}
+    >
       {items.map((item) => {
         return (
           <Accordion data-test={`accordion-item-${item.id}`} key={item.id}>

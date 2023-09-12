@@ -1,9 +1,9 @@
 import ItemsAccordion from '../components/Accordion'
+import GrudgeList from '../components/GrudgeList'
 import PostButton from '../components/PostButton'
 import styles from './examples.module.css'
-import GrudgeList from '../components/GrudgeList'
 
-const items = [
+export const items = [
   {
     summary: 'Example 1) Multi-page testing',
     details: `You can quite easily write tests across pages to better test
@@ -32,17 +32,15 @@ const items = [
   },
 ]
 
-export default function ExamplesPage(){ 
-    return (
-        <main className={styles.main}>
-            <h1 className={styles.header}>
-                Examples
-            </h1>
-            <ItemsAccordion items={items} />
-            <div className={styles.postButton}>
-            <PostButton className={styles.postButton} />
-            </div>
-            <GrudgeList />
-        </main>
-    )
+export default function ExamplesPage() {
+  return (
+    <main className={styles.main}>
+      <h1 className={styles.header}>Examples</h1>
+      <ItemsAccordion items={items} />
+      <div className={styles.postButton}>
+        <PostButton className={styles.postButton} />
+      </div>
+      <GrudgeList />
+    </main>
+  )
 }
