@@ -7,9 +7,9 @@ describe('Fundamentals test', () => {
     )
   })
   it('Accordion works correctly', () => {
-    cy.contains(/Your test will exist in a describe block/i, {
-      timeout: 10000,
-    }).should('not.be.visible')
+    cy.contains(/Your test will exist in a describe block/i).should(
+      'not.be.visible'
+    )
     cy.get('[data-test="accordion-item-1"] div[role="button"]').click()
     cy.contains(/Your test will exist in a describe block/i).should(
       'be.visible'
