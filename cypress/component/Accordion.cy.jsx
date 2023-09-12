@@ -7,5 +7,9 @@ describe('Accordion.cy.jsx', () => {
     cy.getDataTest('accordion-wrap').within(() => {
       cy.get('[data-test^="accordion-item"]').should('have.length', 4)
     })
+    cy.contains(
+      'You can quite easily write tests across pages to better test entire user workflows'
+    )
+    cy.getDataTest('accordion-item-1').click()
   })
 })
