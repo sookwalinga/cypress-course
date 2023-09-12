@@ -32,6 +32,7 @@ describe('Various best-practices', () => {
 
   it.only('grudges', () => {
     cy.contains(/add some grudges/i)
+    cy.getDataTest('grudge-list')
     cy.getDataTest('grudge-input').within(() => {
       cy.get('input').type('some grudge')
     })
