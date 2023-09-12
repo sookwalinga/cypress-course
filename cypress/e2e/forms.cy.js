@@ -21,7 +21,7 @@ describe('Forms test', () => {
     cy.wait(3000)
     cy.contains(/Invalid email: sookwalinga@gmail.io!/i).should('not.exist')
 
-    cy.contains(/fail!/i).should('exist')
+    cy.contains(/fail!/i).should('not.exist')
     cy.getDataTest('subscribe-button').click()
     cy.contains(/fail!/i).should('exist')
   })
