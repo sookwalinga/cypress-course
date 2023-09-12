@@ -32,11 +32,17 @@ describe('Various best-practices', () => {
 
   it.only('grudges', () => {
     cy.contains(/add some grudges/i)
-    cy.getDataTest('grudge-list')
+    cy.getDataTest('grudge-list').within(() => {
+      cy.get('li').should('have.length', 0)
+    })
     cy.getDataTest('grudge-input').within(() => {
       cy.get('input').type('some grudge')
     })
 
     cy.getDataTest('add-grudge-button').click()
+
+    cy.getDataTest('grudge-list').within(() => {
+      cy.get('li').should('have.length', 1)
+    })
   })
 })
