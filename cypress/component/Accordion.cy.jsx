@@ -1,5 +1,7 @@
+const { default: ItemsAccordion } = require('@/app/components/Accordion')
+
 describe('Accordion.cy.jsx', () => {
   it('playground', () => {
-    // cy.mount()
+    cy.mount(<ItemsAccordion items={[]} />)
   })
 })
