@@ -9,4 +9,6 @@ describe('Forms test', () => {
     cy.getDataTest('subscribe-button').click()
     cy.contains(/Successfully subbed: sookwalinga@gmail.com!/i).should('exist')
   })
+
+  
 })
