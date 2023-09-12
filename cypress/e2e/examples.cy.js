@@ -23,10 +23,14 @@ describe('Various best-practices', () => {
     cy.location('pathname').should('equal', '/best-practices')
   })
 
-  it.only('intercepts', () => {
+  it('intercepts', () => {
     cy.intercept('POST', 'http://localhost:3000/examples', {
       fixture: 'example.json',
     })
     cy.getDataTest('post-button').click()
+  })
+
+  it.only('grudges', () => {
+    cy.contains(/add some grudges/i)
   })
 })
