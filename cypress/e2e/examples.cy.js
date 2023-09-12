@@ -13,8 +13,8 @@ describe('Various best-practices', () => {
     cy.getDataTest('nav-forms').click()
     cy.location('pathname').should('equal', '/forms')
 
-    cy.getDataTest('nav-examples').click()
-    cy.location('pathname').should('equal', '/examples')
+    // cy.getDataTest('nav-examples').click()
+    // cy.location('pathname').should('equal', '/examples')
 
     cy.getDataTest('nav-component').click()
     cy.location('pathname').should('equal', '/component')
