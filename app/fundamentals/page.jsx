@@ -57,7 +57,7 @@ const items = [
     summary: 'Fundamental 8) Custom commands',
     details: `You aren't limited to just the cy.X commands, but you can create
         your own custom commands. You add your custom commands to cypress/support/commands.ts
-        For example, you might add a custom command getData that gets an element by dataTest`,
+        For example, you might add a custom command getData that gets an element by data-test`,
     id: '8',
   },
 ]
@@ -65,7 +65,7 @@ const items = [
 export default function FundamentalsPage() {
   return (
     <main className={styles.main}>
-      <h1 className={styles.header} dataTest='fundamentals-header'>
+      <h1 className={styles.header} data-test='fundamentals-header'>
         Testing Fundamentals
       </h1>
       <ItemsAccordion items={items} />
