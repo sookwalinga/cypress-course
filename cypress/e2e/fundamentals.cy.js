@@ -11,6 +11,9 @@ describe('Fundamentals test', () => {
     cy.contains(/Your test will exist in a describe block/i).should(
       'not.be.visible'
     )
-    cy.get('[data-test="accordion-item-1"]').click().pause()
+    cy.get('[data-test="accordion-item-1"]').click()
+    cy.contains(/Your test will exist in a describe block/i).should(
+      'be.visible'
+    )
   })
 })
