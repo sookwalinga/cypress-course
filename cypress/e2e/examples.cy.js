@@ -53,6 +53,7 @@ describe('Various best-practices', () => {
 
     cy.getDataTest('grudge-list').within(() => {
       cy.get('li').should('have.length', 2)
+      cy.get('li').its(0).should('contains.text', 'some grudge')
     })
   })
 })
