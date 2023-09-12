@@ -8,6 +8,9 @@ describe('Fundamentals test', () => {
   })
   it('Accordion works correctly', () => {
     cy.visit('/fundamentals')
+    cy.contains(/Your test will exist in a describe block/i).should(
+      'not.be.visible'
+    )
     cy.get('[data-test="accordion-item-1"]').click().pause()
   })
 })
